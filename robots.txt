@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://celebnews.github.io/RahaBlog/sitemap.xml
