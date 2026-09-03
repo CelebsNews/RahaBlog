@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <!-- ===== হোমপেজ ===== -->
+    <url>
+        <loc>https://celebnews.github.io/RahaBlog/</loc>
+        <lastmod>2026-09-04</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- ===== স্ট্যাটিক পেজ ===== -->
+    <url>
+        <loc>https://celebnews.github.io/RahaBlog/about.html</loc>
+        <lastmod>2026-09-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://celebnews.github.io/RahaBlog/contact.html</loc>
+        <lastmod>2026-09-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://celebnews.github.io/RahaBlog/privacy.html</loc>
+        <lastmod>2026-09-03</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://celebnews.github.io/RahaBlog/terms.html</loc>
+        <lastmod>2026-09-03</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <!-- ===== ক্যাটাগরি পেজ ===== -->
+    <url>
+        <loc>https://celebnews.github.io/RahaBlog/category/music.html</loc>
+        <lastmod>2026-09-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://celebnews.github.io/RahaBlog/category/hollywood.html</loc>
+        <lastmod>2026-09-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://celebnews.github.io/RahaBlog/category/tv.html</loc>
+        <lastmod>2026-09-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://celebnews.github.io/RahaBlog/category/fashion.html</loc>
+        <lastmod>2026-09-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- ===== ব্লগ পোস্ট ===== -->
+    <url>
+        <loc>https://celebnews.github.io/RahaBlog/posts/2026-09-04-taylor-swift-new-album.html</loc>
+        <lastmod>2026-09-04</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- নতুন পোস্ট যোগ করলে এখানে যোগ করুন -->
+    <!--
+    <url>
+        <loc>https://celebnews.github.io/RahaBlog/posts/2026-09-05-post-title.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    -->
+    
+</urlset>
