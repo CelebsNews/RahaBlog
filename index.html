@@ -4,32 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     
-    <!-- ==========================================================
-    এসইও মেটা ট্যাগ
-    ========================================================== -->
     <title>RahaBlog – Celebrity News & Entertainment</title>
     <meta name="description" content="RahaBlog brings you the latest celebrity news, Hollywood gossip, music updates, and entertainment stories from around the world." />
-    <link rel="canonical" href="https://rahablog.github.io/" />
+    <link rel="canonical" href="https://celebnews.github.io/RahaBlog/" />
     
-    <!-- ওপেন গ্রাফ -->
     <meta property="og:title" content="RahaBlog – Celebrity News & Entertainment" />
     <meta property="og:description" content="Latest celebrity news, gossip, and entertainment updates." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rahablog.github.io/" />
-    
-    <!-- স্কিমা মার্কআপ -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "RahaBlog",
-        "url": "https://rahablog.github.io/",
-        "description": "Breaking celebrity news and entertainment updates."
-    }
-    </script>
+    <meta property="og:url" content="https://celebnews.github.io/RahaBlog/" />
     
     <style>
-        /* ===== রিসেট ===== */
         * {
             margin: 0;
             padding: 0;
@@ -54,7 +38,6 @@
             padding: 0 20px;
         }
         
-        /* ===== হেডার ===== */
         .site-header {
             background: #ffffff;
             border-bottom: 1px solid #eaeaea;
@@ -108,7 +91,6 @@
             color: #e53e5a;
         }
         
-        /* ===== ব্রেকিং বার ===== */
         .breaking-bar {
             background: #e53e5a;
             color: #fff;
@@ -150,7 +132,6 @@
             100% { transform: translateX(-100%); }
         }
         
-        /* ===== হিরো সেকশন ===== */
         .hero {
             padding: 50px 0 30px;
             text-align: center;
@@ -173,68 +154,84 @@
             margin: 0 auto;
         }
         
-        /* ===== ফিচার্ড সেকশন ===== */
-        .featured-section {
-            padding: 20px 0 10px;
-        }
-        
-        .section-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 12px;
+        .post-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
             margin-bottom: 28px;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
         
-        .section-title span {
-            color: #e53e5a;
+        .post-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.10);
         }
         
-        /* ===== খালি স্টেট ===== */
-        .empty-state {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 60px 40px;
-            text-align: center;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-            border: 2px dashed #e0e0e0;
+        .post-thumb {
+            height: 200px;
+            background: #eaeaea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.2rem;
+            color: #aaa;
         }
         
-        .empty-state .icon {
-            font-size: 4rem;
-            margin-bottom: 16px;
+        .post-body {
+            padding: 20px 24px 24px;
         }
         
-        .empty-state h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: #1a1a2e;
-        }
-        
-        .empty-state p {
-            font-size: 1rem;
-            color: #888;
-            max-width: 450px;
-            margin: 0 auto 20px;
-        }
-        
-        .empty-state .btn {
+        .post-category {
             display: inline-block;
             background: #e53e5a;
             color: #fff;
-            padding: 10px 30px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: background 0.2s;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 2px 14px;
+            border-radius: 20px;
         }
         
-        .empty-state .btn:hover {
-            background: #c73652;
+        .post-body h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 10px 0 6px;
+            line-height: 1.4;
         }
         
-        /* ===== সাইডবার ===== */
+        .post-body h3 a {
+            color: #1a1a2e;
+        }
+        
+        .post-body h3 a:hover {
+            color: #e53e5a;
+        }
+        
+        .post-meta {
+            font-size: 0.8rem;
+            color: #888;
+            display: flex;
+            gap: 18px;
+            margin-bottom: 8px;
+        }
+        
+        .post-excerpt {
+            font-size: 0.92rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .post-excerpt a {
+            color: #e53e5a;
+            font-weight: 500;
+        }
+        
+        .post-excerpt a:hover {
+            text-decoration: underline;
+        }
+        
         .blog-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -335,7 +332,6 @@
             color: #fff;
         }
         
-        /* ===== ফুটার ===== */
         .site-footer {
             background: #1a1a2e;
             color: #ccc;
@@ -388,7 +384,6 @@
             opacity: 0.6;
         }
         
-        /* ===== রেস্পন্সিভ ===== */
         @media (max-width: 900px) {
             .blog-grid {
                 grid-template-columns: 1fr;
@@ -422,64 +417,41 @@
             .hero h1 {
                 font-size: 1.8rem;
             }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .empty-state {
-                padding: 40px 20px;
-            }
-            
-            .empty-state .icon {
-                font-size: 3rem;
-            }
-            
-            .empty-state h3 {
-                font-size: 1.2rem;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- ==========================================================
-    হেডার
-    ========================================================== -->
+    <!-- ===== হেডার ===== -->
     <header class="site-header">
         <div class="container">
             <div class="site-logo">
-                <a href="/">Raha<span>Blog</span></a>
+                <a href="index.html">Raha<span>Blog</span></a>
                 <small>Celebrity News &amp; Gossip</small>
             </div>
             <nav class="main-nav">
-                <a href="/">Home</a>
-                <a href="/category/hollywood">Hollywood</a>
-                <a href="/category/music">Music</a>
-                <a href="/category/tv">TV &amp; Film</a>
-                <a href="/category/fashion">Fashion</a>
+                <a href="index.html">Home</a>
+                <a href="category/hollywood.html">Hollywood</a>
+                <a href="category/music.html">Music</a>
+                <a href="category/tv.html">TV &amp; Film</a>
+                <a href="category/fashion.html">Fashion</a>
                 <a href="about.html">About</a>
             </nav>
         </div>
     </header>
 
-    <!-- ==========================================================
-    ব্রেকিং নিউজ বার
-    ========================================================== -->
+    <!-- ===== ব্রেকিং বার ===== -->
     <div class="breaking-bar">
         <div class="container">
             <span class="breaking-label">⚡ Breaking</span>
             <div class="breaking-text">
                 <span>Welcome to RahaBlog – Your daily source for celebrity news &bull;</span>
                 <span>Stay tuned for the latest Hollywood updates &bull;</span>
-                <span>Celebrity gossip, music, fashion and more &bull;</span>
             </div>
         </div>
     </div>
 
-    <!-- ==========================================================
-    হিরো সেকশন
-    ========================================================== -->
+    <!-- ===== হিরো ===== -->
     <section class="hero">
         <div class="container">
             <h1>Welcome to <span>RahaBlog</span></h1>
@@ -487,45 +459,55 @@
         </div>
     </section>
 
-    <!-- ==========================================================
-    মেইন গ্রিড
-    ========================================================== -->
+    <!-- ===== মেইন গ্রিড ===== -->
     <div class="container blog-grid">
 
         <!-- ===== বাম দিক: পোস্ট লিস্ট ===== -->
-        <main class="featured-section">
-            <h2 class="section-title">🔥 <span>Latest Stories</span></h2>
+        <main>
+            <h2 style="font-size:1.4rem; font-weight:700; border-bottom:2px solid #eaeaea; padding-bottom:12px; margin-bottom:28px;">
+                🔥 <span style="color:#e53e5a;">Latest Stories</span>
+            </h2>
 
-            <!-- খালি স্টেট – কোনো পোস্ট নেই -->
-            <div class="empty-state">
-                <div class="icon">📰</div>
-                <h3>No posts yet</h3>
-                <p>Stay tuned! Exciting celebrity news and entertainment stories coming soon.</p>
-                <a href="#" class="btn">Coming Soon</a>
-            </div>
+            <!-- ==========================================================
+            ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+            ★★★  পোস্ট কার্ড এখানে যোগ করুন ★★★
+            ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+            ========================================================== -->
 
-            <!-- 
-                ==========================================================
-                আপনি যখন নতুন পোস্ট যোগ করবেন, তখন এই জায়গায় 
-                নিচের মতো করে পোস্ট কার্ড যোগ করবেন:
-                ==========================================================
-                
-              <!-- NEW POST CARD - Add this -->
-<article class="post-card">
-    <div class="post-thumb">📷</div>
-    <div class="post-body">
-        <span class="post-category">Music</span>
-        <h3><a href="posts/2026-09-04-taylor-swift-new-album.html">Taylor Swift Announces New Album 'Eternal Echoes'</a></h3>
-        <div class="post-meta">
-            <span>📅 September 4, 2026</span>
-            <span>✍️ RahaBlog Staff</span>
-        </div>
-        <p class="post-excerpt">
-            Taylor Swift announces her 12th studio album 'Eternal Echoes' releasing in 2027...
-            <a href="posts/2026-09-04-taylor-swift-new-album.html">Read more →</a>
-        </p>
-    </div>
-</article>
+            <!-- পোস্ট ১ -->
+            <article class="post-card">
+                <div class="post-thumb">🎵</div>
+                <div class="post-body">
+                    <span class="post-category">Music</span>
+                    <h3><a href="posts/2026-09-04-taylor-swift-new-album.html">Taylor Swift Announces New Album 'Eternal Echoes'</a></h3>
+                    <div class="post-meta">
+                        <span>📅 September 4, 2026</span>
+                        <span>✍️ RahaBlog Staff</span>
+                    </div>
+                    <p class="post-excerpt">
+                        Taylor Swift announces her 12th studio album 'Eternal Echoes' releasing in 2027...
+                        <a href="posts/2026-09-04-taylor-swift-new-album.html">Read more →</a>
+                    </p>
+                </div>
+            </article>
+
+            <!-- পোস্ট ২ (যোগ করতে চাইলে) -->
+            <!--
+            <article class="post-card">
+                <div class="post-thumb">🎬</div>
+                <div class="post-body">
+                    <span class="post-category">Hollywood</span>
+                    <h3><a href="posts/2026-09-03-jlo-ben-affleck.html">Jennifer Lopez and Ben Affleck Reunite for Dinner in LA</a></h3>
+                    <div class="post-meta">
+                        <span>📅 September 3, 2026</span>
+                        <span>✍️ RahaBlog Staff</span>
+                    </div>
+                    <p class="post-excerpt">
+                        JLo and Ben Affleck spark reunion rumors after intimate dinner in LA...
+                        <a href="posts/2026-09-03-jlo-ben-affleck.html">Read more →</a>
+                    </p>
+                </div>
+            </article>
             -->
 
         </main>
@@ -533,7 +515,6 @@
         <!-- ===== ডান দিক: সাইডবার ===== -->
         <aside>
 
-            <!-- সার্চ -->
             <div class="sidebar-widget">
                 <h4>🔍 Search</h4>
                 <form class="search-box" action="/search" method="get">
@@ -542,29 +523,23 @@
                 </form>
             </div>
 
-            <!-- ট্রেন্ডিং -->
             <div class="sidebar-widget">
                 <h4>🔥 Trending Now</h4>
                 <ul>
+                    <li><a href="posts/2026-09-04-taylor-swift-new-album.html">Taylor Swift New Album</a></li>
                     <li><a href="#">Coming soon...</a></li>
-                    <li><a href="#">Stay tuned for updates</a></li>
-                    <li><a href="#">Celebrity news loading</a></li>
                 </ul>
             </div>
 
-            <!-- টপ সেলিব্রিটিজ -->
             <div class="sidebar-widget">
                 <h4>⭐ Top Celebrities</h4>
                 <ul>
                     <li><a href="#">Taylor Swift</a></li>
                     <li><a href="#">Beyoncé</a></li>
                     <li><a href="#">Ryan Reynolds</a></li>
-                    <li><a href="#">Rihanna</a></li>
-                    <li><a href="#">Tom Holland</a></li>
                 </ul>
             </div>
 
-            <!-- ট্যাগ ক্লাউড -->
             <div class="sidebar-widget">
                 <h4>🏷️ Topics</h4>
                 <div class="tag-cloud">
@@ -572,49 +547,28 @@
                     <a href="#">#Music</a>
                     <a href="#">#Fashion</a>
                     <a href="#">#Movies</a>
-                    <a href="#">#Awards</a>
-                    <a href="#">#Couples</a>
-                    <a href="#">#Scandal</a>
-                    <a href="#">#RedCarpet</a>
                 </div>
-            </div>
-
-            <!-- নিউজলেটার -->
-            <div class="sidebar-widget">
-                <h4>📬 Newsletter</h4>
-                <p style="font-size:0.9rem; color:#666; margin-bottom:12px;">
-                    Get the latest celebrity news straight to your inbox.
-                </p>
-                <form style="display:flex; flex-direction:column; gap:8px;">
-                    <input type="email" placeholder="Your email" style="padding:10px 14px; border:1px solid #ddd; border-radius:6px; font-size:0.9rem;" />
-                    <button type="submit" style="background:#e53e5a; color:#fff; border:0; padding:10px; border-radius:6px; font-weight:600; cursor:pointer;">Subscribe</button>
-                </form>
             </div>
 
         </aside>
 
     </div>
 
-    <!-- ==========================================================
-    ফুটার
-    ========================================================== -->
+    <!-- ===== ফুটার ===== -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-links">
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="/contact">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
                 <a href="privacy.html">Privacy</a>
-                <a href="/terms.html">Terms</a>
-                <a href="/sitemap.xml">Sitemap</a>
-                 
+                <a href="terms.html">Terms</a>
             </div>
             <div class="footer-social">
-                <a href="#" aria-label="Twitter">🐦</a>
-                <a href="#" aria-label="Instagram">📷</a>
-                <a href="#" aria-label="Facebook">👍</a>
-                <a href="#" aria-label="YouTube">▶️</a>
-                <a href="#" aria-label="TikTok">🎵</a>
+                <a href="#">🐦</a>
+                <a href="#">📷</a>
+                <a href="#">👍</a>
+                <a href="#">▶️</a>
             </div>
             <small>&copy; 2026 RahaBlog. All rights reserved.</small>
         </div>
