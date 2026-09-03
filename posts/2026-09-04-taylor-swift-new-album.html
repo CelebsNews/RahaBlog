@@ -4,105 +4,237 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     
-    <!-- ★★★ CHANGE THESE FOR EACH POST ★★★ -->
+    <!-- ★★★ পোস্টের জন্য পরিবর্তন করুন ★★★ -->
     <title>Taylor Swift Announces New Album 'Eternal Echoes' | RahaBlog</title>
     <meta name="description" content="Taylor Swift announces her 12th studio album 'Eternal Echoes' releasing in 2027. Get tracklist, tour dates, and exclusive details on RahaBlog." />
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; background: #f8f9fa; color: #1a1a2e; line-height: 1.8; }
-        h1 { color: #e53e5a; }
-        .meta { color: #888; font-size: 0.9rem; margin-bottom: 20px; border-bottom: 1px solid #eaeaea; padding-bottom: 15px; }
-        a { color: #e53e5a; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .back { margin-top: 30px; display: block; }
-        .tags { margin-top: 20px; padding-top: 15px; border-top: 1px solid #eaeaea; }
-        .tags a { background: #f0f0f0; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; display: inline-block; margin: 4px; }
-        .tags a:hover { background: #e53e5a; color: #fff; text-decoration: none; }
-        .featured-image { 
-            background: #eaeaea; 
-            height: 250px; 
-            border-radius: 10px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-size: 4rem; 
-            color: #aaa;
-            margin: 20px 0;
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; color: #1a1a2e; line-height: 1.8; }
+        
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
-        h2 { color: #1a1a2e; margin-top: 28px; }
-        blockquote {
+        
+        .post-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1a1a2e;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+        
+        .meta {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #eaeaea;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        /* ★★★ ইমেজ স্টাইল ★★★ */
+        .featured-image {
+            width: 100%;
+            height: 350px;
+            background: #eaeaea;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 16px 0 24px;
+        }
+        
+        .featured-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .post-content p {
+            font-size: 1.05rem;
+            color: #333;
+            margin-bottom: 18px;
+            line-height: 1.8;
+        }
+        
+        .post-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 32px 0 14px;
+            color: #1a1a2e;
+        }
+        
+        .post-content ul {
+            margin: 12px 0 20px 24px;
+        }
+        
+        .post-content ul li {
+            font-size: 1.02rem;
+            color: #444;
+            margin-bottom: 6px;
+        }
+        
+        .post-content blockquote {
             border-left: 4px solid #e53e5a;
             padding-left: 20px;
-            margin: 20px 0;
+            margin: 24px 0;
             font-style: italic;
             color: #555;
         }
-        ul { margin: 10px 0 20px 24px; }
-        ul li { margin-bottom: 6px; }
+        
+        .post-content blockquote footer {
+            margin-top: 6px;
+            font-weight: 600;
+            font-style: normal;
+            color: #1a1a2e;
+        }
+        
+        .tags {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eaeaea;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: center;
+        }
+        
+        .tags a {
+            background: #f0f0f0;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            color: #444;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+        
+        .tags a:hover {
+            background: #e53e5a;
+            color: #fff;
+        }
+        
+        .back-home {
+            display: inline-block;
+            margin-top: 24px;
+            color: #e53e5a;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        .back-home:hover {
+            text-decoration: underline;
+        }
+        
+        /* রেস্পন্সিভ */
+        @media (max-width: 600px) {
+            .post-card {
+                padding: 24px 18px;
+            }
+            
+            h1 {
+                font-size: 1.6rem;
+            }
+            
+            .featured-image {
+                height: 200px;
+            }
+            
+            .meta {
+                font-size: 0.8rem;
+                gap: 12px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- ★★★ POST TITLE ★★★ -->
-    <h1>Taylor Swift Announces New Album 'Eternal Echoes'</h1>
-    
-    <!-- ★★★ POST META INFO ★★★ -->
-    <div class="meta">
-        <span>📅 September 4, 2026</span> &nbsp;|&nbsp;
-        <span>✍️ RahaBlog Staff</span> &nbsp;|&nbsp;
-        <span>⏱️ 3 min read</span>
+    <div class="container">
+        <article class="post-card">
+
+            <!-- ★★★ পোস্টের শিরোনাম ★★★ -->
+            <h1>Taylor Swift Announces New Album 'Eternal Echoes'</h1>
+            
+            <!-- ★★★ মেটা তথ্য ★★★ -->
+            <div class="meta">
+                <span>📅 September 4, 2026</span>
+                <span>✍️ RahaBlog Staff</span>
+                <span>⏱️ 3 min read</span>
+            </div>
+
+            <!-- ==========================================================
+            ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+            ★★★  এখানে ইমেজ যোগ করুন ★★★
+            ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+            ========================================================== -->
+            
+            <!-- ★★★ ফিচার্ড ইমেজ ★★★ -->
+            <div class="featured-image">
+                <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?w=800&h=450&fit=crop" alt="Taylor Swift New Album Eternal Echoes" loading="lazy" />
+            </div>
+
+            <!-- ==========================================================
+            ★★★ এখানে আপনার আর্টিকেল কন্টেন্ট ★★★
+            ========================================================== -->
+            
+            <div class="post-content">
+                <p><strong>Taylor Swift</strong> has officially announced her 12th studio album <strong>"Eternal Echoes"</strong>, set to release on <strong>March 15, 2027</strong>. The pop superstar made the announcement via a cryptic social media post that sent fans into a frenzy.</p>
+
+                <p>The album is described as a <strong>"return to her folk-pop roots"</strong> with a modern twist. Swift collaborated with longtime producer Jack Antonoff and surprise guest producer Aaron Dessner of The National.</p>
+
+                <h2>📋 Tracklist Revealed</h2>
+                <p>Here's the full 16-track tracklist for "Eternal Echoes":</p>
+                <ul>
+                    <li>1. "Midnight Rain"</li>
+                    <li>2. "Echoes of You"</li>
+                    <li>3. "Paper Rings 2.0"</li>
+                    <li>4. "Invisible String 2027"</li>
+                    <li>5. "The Last Great American Dynasty (Part II)"</li>
+                    <li>6. "Maroon 2.0"</li>
+                    <li>7. "Anti-Hero (Remix)"</li>
+                    <li>8. "Lavender Haze (Acoustic)"</li>
+                </ul>
+
+                <h2>🌍 World Tour Announcement</h2>
+                <p>Along with the album, Swift announced the <strong>"Eternal Echoes World Tour"</strong> kicking off in <strong>May 2027</strong>. The tour will visit North America, Europe, Asia, and Australia with over 50 shows planned.</p>
+
+                <p>Fans can expect <strong>exclusive merchandise</strong> and surprise guest appearances throughout the tour. Pre-sale tickets start on <strong>October 15, 2026</strong>.</p>
+
+                <blockquote>
+                    "This album is very personal to me. It's about finding light in the darkest moments and celebrating the echoes of love that stay with us forever."
+                    <footer>— Taylor Swift</footer>
+                </blockquote>
+
+                <h2>📱 Social Media Reactions</h2>
+                <p>Fans took to social media with the hashtag <strong>#EternalEchoes</strong>, which quickly became a global trend. Celebrities including <strong>Selena Gomez</strong> and <strong>Ed Sheeran</strong> shared their excitement online.</p>
+            </div>
+
+            <!-- ★★★ ট্যাগ ★★★ -->
+            <div class="tags">
+                <strong>🏷️ Tags:</strong>
+                <a href="#">#TaylorSwift</a>
+                <a href="#">#NewAlbum</a>
+                <a href="#">#EternalEchoes</a>
+                <a href="#">#PopMusic</a>
+                <a href="#">#Tour2027</a>
+            </div>
+
+            <!-- ★★★ হোমপেজে ফেরত ★★★ -->
+            <a href="../index.html" class="back-home">← Back to Home</a>
+
+        </article>
     </div>
-
-    <!-- ★★★ FEATURED IMAGE (optional) ★★★ -->
-    <div class="featured-image">🎵</div>
-
-    <!-- ==========================================================
-    ★★★ WRITE YOUR FULL ARTICLE HERE ★★★
-    ========================================================== -->
-    
-    <p><strong>Taylor Swift</strong> has officially announced her 12th studio album <strong>"Eternal Echoes"</strong>, set to release on <strong>March 15, 2027</strong>. The pop superstar made the announcement via a cryptic social media post that sent fans into a frenzy.</p>
-
-    <p>The album is described as a <strong>"return to her folk-pop roots"</strong> with a modern twist. Swift collaborated with longtime producer Jack Antonoff and surprise guest producer Aaron Dessner of The National.</p>
-
-    <h2>📋 Tracklist Revealed</h2>
-    <p>Here's the full 16-track tracklist for "Eternal Echoes":</p>
-    <ul>
-        <li>1. "Midnight Rain"</li>
-        <li>2. "Echoes of You"</li>
-        <li>3. "Paper Rings 2.0"</li>
-        <li>4. "Invisible String 2027"</li>
-        <li>5. "The Last Great American Dynasty (Part II)"</li>
-        <li>6. "Maroon 2.0"</li>
-        <li>7. "Anti-Hero (Remix)"</li>
-        <li>8. "Lavender Haze (Acoustic)"</li>
-    </ul>
-
-    <h2>🌍 World Tour Announcement</h2>
-    <p>Along with the album, Swift announced the <strong>"Eternal Echoes World Tour"</strong> kicking off in <strong>May 2027</strong>. The tour will visit North America, Europe, Asia, and Australia with over 50 shows planned.</p>
-
-    <p>Fans can expect <strong>exclusive merchandise</strong> and surprise guest appearances throughout the tour. Pre-sale tickets start on <strong>October 15, 2026</strong>.</p>
-
-    <blockquote>
-        "This album is very personal to me. It's about finding light in the darkest moments and celebrating the echoes of love that stay with us forever."
-        <footer style="margin-top:6px; font-weight:600;">— Taylor Swift</footer>
-    </blockquote>
-
-    <h2>📱 Social Media Reactions</h2>
-    <p>Fans took to social media with the hashtag <strong>#EternalEchoes</strong>, which quickly became a global trend. Celebrities including <strong>Selena Gomez</strong> and <strong>Ed Sheeran</strong> shared their excitement online.</p>
-
-    <!-- ★★★ TAGS ★★★ -->
-    <div class="tags">
-        <strong>🏷️ Tags:</strong>
-        <a href="#">#TaylorSwift</a>
-        <a href="#">#NewAlbum</a>
-        <a href="#">#EternalEchoes</a>
-        <a href="#">#PopMusic</a>
-        <a href="#">#Tour2027</a>
-    </div>
-
-    <!-- ★★★ BACK TO HOME LINK ★★★ -->
-    <a href="index.html" class="back">← Back to Home</a>
 
 </body>
 </html>
