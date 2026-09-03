@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Music News | RahaBlog</title>
+    <meta name="description" content="Latest music news, album releases, concert tours, and artist updates on RahaBlog." />
+    <link rel="canonical" href="https://celebnews.github.io/RahaBlog/category/music.html" />
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; color: #1a1a2e; line-height: 1.7; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+        
+        .site-header { background: #fff; border-bottom: 1px solid #eaeaea; padding: 18px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 6px rgba(0,0,0,0.04); }
+        .site-header .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+        .site-logo { font-size: 1.6rem; font-weight: 800; }
+        .site-logo span { color: #e53e5a; }
+        .site-logo small { display: block; font-size: 0.7rem; font-weight: 400; color: #888; }
+        .main-nav { display: flex; gap: 24px; font-size: 0.9rem; font-weight: 500; flex-wrap: wrap; }
+        .main-nav a { color: #333; transition: color 0.2s; }
+        .main-nav a:hover { color: #e53e5a; }
+        .main-nav a.active { color: #e53e5a; border-bottom: 2px solid #e53e5a; padding-bottom: 4px; }
+        
+        .page-header {
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        .page-header h1 { font-size: 2.4rem; font-weight: 800; }
+        .page-header h1 span { color: #e53e5a; }
+        .page-header p { color: #666; font-size: 1.1rem; }
+        
+        .post-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            margin-bottom: 28px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+        .post-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,0.10); }
+        .post-thumb { width: 100%; height: 220px; background: #eaeaea; overflow: hidden; flex-shrink: 0; }
+        .post-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .post-body { padding: 20px 24px 24px; flex: 1; display: flex; flex-direction: column; }
+        .post-category { display: inline-block; background: #e53e5a; color: #fff; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; padding: 2px 14px; border-radius: 20px; align-self: flex-start; }
+        .post-body h3 { font-size: 1.2rem; font-weight: 700; margin: 10px 0 6px; line-height: 1.4; }
+        .post-body h3 a { color: #1a1a2e; transition: color 0.2s; }
+        .post-body h3 a:hover { color: #e53e5a; }
+        .post-meta { font-size: 0.8rem; color: #888; display: flex; gap: 18px; margin-bottom: 8px; flex-wrap: wrap; }
+        .post-excerpt { font-size: 0.92rem; color: #555; line-height: 1.6; flex: 1; }
+        .post-excerpt a { color: #e53e5a; font-weight: 500; }
+        .post-excerpt a:hover { text-decoration: underline; }
+        
+        .content-area {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px 0 50px;
+        }
+        
+        .no-posts {
+            background: #fff;
+            border-radius: 12px;
+            padding: 60px 40px;
+            text-align: center;
+            border: 2px dashed #e0e0e0;
+        }
+        .no-posts .icon { font-size: 4rem; }
+        .no-posts h3 { font-size: 1.5rem; margin-bottom: 8px; }
+        .no-posts p { color: #888; }
+        
+        .site-footer {
+            background: #1a1a2e;
+            color: #ccc;
+            padding: 40px 0 30px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 12px; }
+        .footer-links a { color: #ccc; font-size: 0.85rem; transition: color 0.2s; }
+        .footer-links a:hover { color: #e53e5a; }
+        .site-footer small { font-size: 0.78rem; opacity: 0.6; }
+        
+        .back-home { display: inline-block; margin-top: 20px; color: #e53e5a; font-weight: 600; }
+        .back-home:hover { text-decoration: underline; }
+        
+        @media (max-width: 600px) {
+            .site-header .container { flex-direction: column; align-items: center; text-align: center; }
+            .main-nav { justify-content: center; gap: 12px; font-size: 0.8rem; flex-wrap: wrap; }
+            .page-header h1 { font-size: 1.8rem; }
+            .post-thumb { height: 160px; }
+            .post-body h3 { font-size: 1rem; }
+            .post-body { padding: 14px 16px 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== হেডার ===== -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-logo">
+                <a href="../index.html">Raha<span>Blog</span></a>
+                <small>Celebrity News &amp; Gossip</small>
+            </div>
+            <nav class="main-nav">
+                <a href="../index.html">Home</a>
+                <a href="../category/hollywood.html">Hollywood</a>
+                <a href="../category/music.html" class="active">Music</a>
+                <a href="../category/tv.html">TV &amp; Film</a>
+                <a href="../category/fashion.html">Fashion</a>
+                <a href="../about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== পেজ হেডার ===== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>🎵 <span>Music</span> News</h1>
+            <p>Latest album releases, concert tours, and artist updates.</p>
+        </div>
+    </section>
+
+    <!-- ===== কন্টেন্ট ===== -->
+    <div class="container content-area">
+
+        <!-- ★★★ মিউজিক পোস্ট এখানে দেখাবে ★★★ -->
+        <article class="post-card">
+            <div class="post-thumb">
+                <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?w=800&h=450&fit=crop" alt="Taylor Swift New Album" loading="lazy" />
+            </div>
+            <div class="post-body">
+                <span class="post-category">Music</span>
+                <h3><a href="../posts/2026-09-04-taylor-swift-new-album.html">Taylor Swift Announces New Album 'Eternal Echoes'</a></h3>
+                <div class="post-meta">
+                    <span>📅 September 4, 2026</span>
+                    <span>✍️ RahaBlog Staff</span>
+                </div>
+                <p class="post-excerpt">
+                    Taylor Swift announces her 12th studio album 'Eternal Echoes' releasing in 2027...
+                    <a href="../posts/2026-09-04-taylor-swift-new-album.html">Read more →</a>
+                </p>
+            </div>
+        </article>
+
+        <!-- আরও মিউজিক পোস্ট যোগ করতে চাইলে এই টেমপ্লেট ব্যবহার করুন -->
+        <!--
+        <article class="post-card">
+            <div class="post-thumb">
+                <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=800&h=450&fit=crop" alt="Beyoncé New Album" loading="lazy" />
+            </div>
+            <div class="post-body">
+                <span class="post-category">Music</span>
+                <h3><a href="../posts/2026-09-03-beyonce-new-album.html">Beyoncé Announces New Album 'Renaissance II'</a></h3>
+                <div class="post-meta">
+                    <span>📅 September 3, 2026</span>
+                    <span>✍️ RahaBlog Staff</span>
+                </div>
+                <p class="post-excerpt">
+                    Beyoncé announces her new album 'Renaissance II' releasing in 2027...
+                    <a href="../posts/2026-09-03-beyonce-new-album.html">Read more →</a>
+                </p>
+            </div>
+        </article>
+        -->
+
+        <a href="../index.html" class="back-home">← Back to Home</a>
+
+    </div>
+
+    <!-- ===== ফুটার ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../privacy.html">Privacy</a>
+                <a href="../terms.html">Terms</a>
+            </div>
+            <small>&copy; 2026 RahaBlog. All rights reserved.</small>
+        </div>
+    </footer>
+
+</body>
+</html>
